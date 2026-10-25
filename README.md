@@ -1,6 +1,6 @@
 # Ferns-and-Petals-Sales-Analysis-Summary Report
 ## 1. Project Overview
-This project uses SQL to analyze Ferns and Petals sales data to identify revenue trends, customer purchasing behaviour, product performance, popular gifting occasions, and delivery efficiency.
+This project analyzes Ferns and Petals sales data using SQL to identify sales trends, customer purchasing behavior, product performance, and delivery efficiency. The analysis combines customer, order, and product data into a unified view for business insights.
 
 ## 2. Key Findings
 **i. Overall sales:** The reported average order value is INR 3,520.99, with approximately 100 unique customers.
