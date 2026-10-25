@@ -2,7 +2,24 @@
 ## 1. Project Overview
 This project analyzes Ferns and Petals sales data using SQL to identify sales trends, customer purchasing behavior, product performance, and delivery efficiency. The analysis combines customer, order, and product data into a unified view for business insights.
 
-## 2. Key Findings
+## Business Questions
+1. Total Revenue: Identify the overall revenue.
+2. Average Order and Delivery Time: Evaluate the time taken for orders to be delivered.
+3. Monthly Sales Performance: Examine how sales fluctuate across the months of 2023.
+4. Top Products by Revenue: Determine which products are the top revenue generators.
+5. Customer Spending Analysis: Understand how much customers are spending on
+average.
+6. Sales Performance by Top 5 Product: Track the sales performance of top 5 products.
+7. Top 10 Cities by Number of Orders: Find out which cities are placing the highest
+number of orders.
+8. Order Quantity vs. Delivery Time: Analyze if higher order quantities impact delivery
+times.
+9. Revenue Comparison Between Occasions: Compare revenue generated across
+different occasions.
+10. Product Popularity by Occasion: Identify which products are most popular during
+specific occasions.
+
+## 3. Key Findings
 **i. Overall sales:** The reported average order value is INR 3,520.99, with approximately 100 unique customers.
 
 **ii. Monthly performance**: August was identified as a strong sales month, while January was reported as the weakest in the detailed monthly analysis.
@@ -25,7 +42,7 @@ This project analyzes Ferns and Petals sales data using SQL to identify sales tr
 
 **xi. Product popularity by occasion:** Customer preferences varied across occasions, creating opportunities for targeted promotions.
 
-## 3. Business Recommendations
+## 4. Business Recommendations
 1. Prioritize inventory for top-selling and high-revenue products.
 
 2. Develop targeted marketing campaigns around major gifting occasions.
@@ -39,10 +56,10 @@ This project analyzes Ferns and Petals sales data using SQL to identify sales tr
 6. Personalize promotions based on customer preferences and purchasing history.
 
 
-## 4. Conclusion
+## 5. Conclusion
 The analysis highlights opportunities for Ferns and Petals to increase revenue through better inventory management, seasonal marketing, and customer targeting. It also identifies delivery efficiency as an area for improvement. 
 
-## 5. Tools and Techniques
+## 6. Tools and Techniques
 SQL / MySQL
 
 Joins and views
