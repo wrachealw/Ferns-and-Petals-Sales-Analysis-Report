@@ -31,9 +31,6 @@ ORDER BY 'Total Revenue' DESC;
 
 -- Average Order and Delivery Time
 
-
--- Average Order and Delivery Time
-
 SELECT
     COUNT(*) AS total_orders,
     ROUND(AVG(TIMESTAMPDIFF(
@@ -104,17 +101,25 @@ ORDER BY orders DESC;
 -- The top 3 hours with the most orders are 7PM, 7AM and 9AM. Time of day with the least orders is 10AM.
 
 -- 3. Monthly Sales Performance: Examine how sales fluctuate across the months of 2023.
-SELECT 
-	MONTH(Order_Date) AS month,
-    COUNT(*) AS orders,
+
+SELECT
+    MONTH(Order_Date) AS Month,
+    COUNT(*) AS Orders,
     SUM(Quantity) AS quantity_sold,
-    SUM(Quantity*Price) AS revenue
+    SUM(Quantity * Price) AS Total_Revenue
 FROM ferns_and_petals
 WHERE YEAR(Order_Date) = 2023
-GROUP BY month
-ORDER BY month;
--- February had the highest quantity sold follwed by March then August which is simmiar with number of orders made. But August had the highest revenue made followed by February then March. January had the least in all categories,  making it the weakest-performing month.
--- Breakdown: month, orders, quantity_sold,revenue, 1	34	92	95468,2	213	673	7045093	166	474	511823,4	40	122	140393,5	43	139	150346,6	45	149	157913,7	39	117	135826,8	165	517	737389,9	40	116	136938,10	39	119	151619,11	134	410	449169,12	42	117	149591
+GROUP BY MONTH(Order_Date)
+ORDER BY Total_Revenue DESC;
+
+SELECT
+    SUM(Quantity * Price) AS Total_Revenue
+FROM ferns_and_petals
+WHERE YEAR(Order_Date) = 2023;
+
+-- Finding: Based on the detailed monthly sales analysis, August generated the highest revenue of INR 737,389, followed by February with INR 704,509. January was the weakest-performing month, with revenue of INR 95,468.
+-- Breakdown: month, orders, quantity_sold,revenue:, '8', '165', '517', '737389','2', '213', '673', '704509','3', '166', '474', '511823','11', '134', '410', '449169','6', '45', '149', '157913','10', '39', '119', '151619','5', '43', '139', '150346','12', '42', '117', '149591','4', '40', '122', '140393','9', '40', '116', '136938','7', '39', '117', '135826','1', '34', '92', '95468'
+
 
 -- 4a. Top Products by Revenue: Determine which products are the top revenue generators.
 SELECT 
